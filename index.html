@@ -107,15 +107,45 @@ header{height:62px}.header-actions .hbtn:first-child{display:none}
 .contact-box{padding:28px;display:block}.buttons{margin-top:20px}
 .heading{display:block}.heading a{display:inline-block;margin-top:10px}
 }
+
+/* OPENING CALL BANNER */
+.welcome-banner{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:
+linear-gradient(135deg,rgba(40,5,67,.94),rgba(101,21,167,.78)),
+url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2200&q=90") center/cover}
+.welcome-overlay{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,255,255,.10),transparent 45%)}
+.welcome-content{position:relative;text-align:center;color:#fff;padding:38px 25px;max-width:700px}
+.welcome-logo{font-size:68px;font-weight:900;letter-spacing:-5px;line-height:.8}
+.welcome-kicker{font-size:15px;letter-spacing:5px;font-weight:800;color:#d9a5ff;margin-top:13px}
+.welcome-content h1{font-size:clamp(42px,7vw,78px);margin-top:16px}
+.welcome-content p{font-size:20px;color:#eee;margin:14px 0 28px}
+.welcome-call{display:inline-flex;align-items:center;justify-content:center;background:#55d400;color:#fff;padding:17px 32px;border-radius:9px;font-size:19px;font-weight:900;box-shadow:0 8px 30px rgba(0,0,0,.28)}
+.welcome-call:hover{transform:translateY(-2px)}
+.welcome-enter{display:block;margin:16px auto 0;background:transparent;border:1px solid rgba(255,255,255,.55);color:#fff;border-radius:8px;padding:10px 22px;cursor:pointer;font-weight:700}
+.welcome-banner.hide{animation:fadeOut .35s ease forwards;pointer-events:none}
+@keyframes fadeOut{to{opacity:0;visibility:hidden}}
+@media(max-width:600px){.welcome-logo{font-size:54px}.welcome-content h1{font-size:42px}.welcome-call{width:100%;font-size:17px}}
+
 </style>
 </head>
 <body>
+<div id="welcomeBanner" class="welcome-banner">
+  <div class="welcome-overlay"></div>
+  <div class="welcome-content">
+    <div class="welcome-logo">SKY</div>
+    <div class="welcome-kicker">PERÚ TRAVEL</div>
+    <h1>SKY Peru Travel</h1>
+    <p>Tu próximo viaje, más fácil</p>
+    <a class="welcome-call" href="tel:+5180078366">📞 Llamar ahora</a>
+    <button class="welcome-enter" id="enterSite">Entrar al sitio</button>
+  </div>
+</div>
+
 
 <header>
   <div class="container header">
     <a class="brand" href="#">
       <span class="mark"></span>
-      <span>SKY Travel Booking<small>Tu próximo viaje, más fácil</small></span>
+      <span>SKY Peru Travel<small>Tu próximo viaje, más fácil</small></span>
     </a>
     <nav class="nav">
       <a href="#inicio">Inicio</a>
@@ -124,8 +154,8 @@ header{height:62px}.header-actions .hbtn:first-child{display:none}
       <a href="#ayuda">Ayuda</a>
     </nav>
     <div class="header-actions">
-      <a class="hbtn" href="tel:+51999999999">Llámanos</a>
-      <a class="hbtn primary" href="https://wa.me/51999999999" target="_blank">WhatsApp</a>
+      <a class="hbtn" href="tel:+5180078366">Llámanos</a>
+      <a class="hbtn primary" href="https://wa.me/5180078366" target="_blank">WhatsApp</a>
     </div>
   </div>
 </header>
@@ -156,8 +186,8 @@ header{height:62px}.header-actions .hbtn:first-child{display:none}
     <div class="result" id="result">
       Para consultar disponibilidad y opciones, habla con un asesor.
       <div style="margin-top:9px">
-        <a class="cta" href="tel:+51999999999">📞 Llamar ahora</a>
-        <a class="cta wa" href="https://wa.me/51999999999" target="_blank">💬 WhatsApp</a>
+        <a class="cta" href="tel:+5180078366">📞 Llamar ahora</a>
+        <a class="cta wa" href="https://wa.me/5180078366" target="_blank">💬 WhatsApp</a>
       </div>
     </div>
   </div>
@@ -214,8 +244,8 @@ header{height:62px}.header-actions .hbtn:first-child{display:none}
         <p>Indícanos origen, destino y fechas de viaje.</p>
       </div>
       <div class="buttons">
-        <a class="cta" href="tel:+51999999999">📞 Llámanos</a>
-        <a class="cta wa" href="https://wa.me/51999999999" target="_blank">💬 WhatsApp</a>
+        <a class="cta" href="tel:+5180078366">📞 Llámanos</a>
+        <a class="cta wa" href="https://wa.me/5180078366" target="_blank">💬 WhatsApp</a>
       </div>
     </div>
   </div>
@@ -224,10 +254,10 @@ header{height:62px}.header-actions .hbtn:first-child{display:none}
 <footer>
   <div class="container">
     <div class="footer-top">
-      <div><div class="brand"><span class="mark"></span><span>SKY Travel Booking<small>Tu próximo viaje, más fácil</small></span></div><p>Información y asistencia para planificar tu viaje.</p></div>
+      <div><div class="brand"><span class="mark"></span><span>SKY Peru Travel<small>Tu próximo viaje, más fácil</small></span></div><p>Información y asistencia para planificar tu viaje.</p></div>
       <div class="footer-links"><a href="#inicio">Inicio</a><a href="#destinos">Destinos</a><a href="#beneficios">Beneficios</a><a href="#ayuda">Ayuda</a></div>
     </div>
-    <div class="copy">© 2026 SKY Travel Booking. Todos los derechos reservados. · Términos · Privacidad</div>
+    <div class="copy">© 2026 SKY Peru Travel. Todos los derechos reservados. · Términos · Privacidad</div>
   </div>
 </footer>
 
@@ -236,6 +266,11 @@ document.getElementById('search').onclick=()=>document.getElementById('result').
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); t.classList.add('active');
 });
+
+const enterSite = document.getElementById('enterSite');
+const welcomeBanner = document.getElementById('welcomeBanner');
+if (enterSite) enterSite.addEventListener('click', () => welcomeBanner.classList.add('hide'));
+
 </script>
 </body>
 </html>
